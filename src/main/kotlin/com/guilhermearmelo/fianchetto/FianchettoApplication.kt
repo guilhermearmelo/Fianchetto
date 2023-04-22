@@ -1,4 +1,4 @@
-package com.guilhermearmelo.Fianchetto
+package com.guilhermearmelo.fianchetto
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

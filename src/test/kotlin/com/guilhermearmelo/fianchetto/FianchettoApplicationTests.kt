@@ -1,4 +1,4 @@
-package com.guilhermearmelo.Fianchetto
+package com.guilhermearmelo.fianchetto
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
