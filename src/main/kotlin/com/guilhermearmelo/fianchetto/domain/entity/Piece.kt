@@ -6,5 +6,5 @@ abstract class Piece(
     private var position: Square,
     private var color: Color
 ) {
-    abstract fun posibleMovements() : List<Square>
+    abstract fun posibleMovements(): List<Square>
 }
