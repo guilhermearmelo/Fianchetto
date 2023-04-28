@@ -11,8 +11,8 @@ enum class File {
     EIGHT;
 
     companion object {
-        fun fromId(id: Int): File{
-            return when(id) {
+        fun fromId(id: Int): File {
+            return when (id) {
                 1 -> ONE
                 2 -> TWO
                 3 -> THREE
@@ -23,6 +23,5 @@ enum class File {
                 else -> EIGHT
             }
         }
-
     }
 }
