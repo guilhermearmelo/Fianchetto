@@ -11,8 +11,8 @@ enum class Rank {
     H;
 
     companion object {
-        fun fromId(id: Int): Rank{
-            return when(id) {
+        fun fromId(id: Int): Rank {
+            return when (id) {
                 1 -> A
                 2 -> B
                 3 -> C
@@ -23,6 +23,5 @@ enum class Rank {
                 else -> H
             }
         }
-
     }
 }

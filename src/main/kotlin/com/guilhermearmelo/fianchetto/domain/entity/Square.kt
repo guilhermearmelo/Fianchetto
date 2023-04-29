@@ -7,7 +7,7 @@ data class Square(
     var file: File,
     var rank: Rank
 ) {
-    fun getSquareName() : String {
-        return rank.name + (file.ordinal+1).toString()
+    fun getSquareName(): String {
+        return rank.name + (file.ordinal + 1).toString()
     }
 }

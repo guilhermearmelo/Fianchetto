@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class FianchettoApplication
 
 fun main(args: Array<String>) {
-	runApplication<FianchettoApplication>(*args)
+    runApplication<FianchettoApplication>(*args)
 }
