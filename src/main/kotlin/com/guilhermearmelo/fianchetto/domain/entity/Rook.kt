@@ -11,10 +11,10 @@ data class Rook(
     private var possibleMovementsSet = mutableSetOf<Square>()
     override fun possibleMovements() {
         for (i in 0..8) {
-            possibleMovementsSet.add(Square(this.position.rank, File.fromId(i + 1)))
-            possibleMovementsSet.add(Square(Rank.fromId(i + 1), this.position.file))
+            possibleMovementsSet.add(Square(File.fromId(i + 1), this.position.rank))
+            possibleMovementsSet.add(Square(this.position.file, Rank.fromId(i + 1)))
         }
-        possibleMovementsSet.remove(Square(this.position.rank, this.position.file))
+        possibleMovementsSet.remove(Square(this.position.file, this.position.rank))
     }
 
     fun getPossibleMovements(): MutableSet<Square> {

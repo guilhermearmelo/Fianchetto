@@ -15,23 +15,23 @@ data class Queen(
         val file = position.file.ordinal + 1
 
         for (i in 0..8) {
-            possibleMovementsSet.add(Square(this.position.rank, File.fromId(i + 1)))
-            possibleMovementsSet.add(Square(Rank.fromId(i + 1), this.position.file))
+            possibleMovementsSet.add(Square(File.fromId(i + 1), this.position.rank))
+            possibleMovementsSet.add(Square(this.position.file, Rank.fromId(i + 1)))
         }
 
         for (i in 1..8) {
-            addMovementIfValid(rank + i, file + i)
-            addMovementIfValid(rank - i, file - i)
-            addMovementIfValid(rank + i, file - i)
-            addMovementIfValid(rank - i, file + i)
+            addMovementIfValid(file + i, rank + i)
+            addMovementIfValid(file - i, rank - i)
+            addMovementIfValid(file + i, rank - i)
+            addMovementIfValid(file - i, rank + i)
         }
 
-        possibleMovementsSet.remove(Square(position.rank, position.file))
+        possibleMovementsSet.remove(Square(position.file, position.rank))
     }
 
     private fun addMovementIfValid(rank: Int, file: Int) {
         if (rank in 1..8 && file in 1..8) {
-            possibleMovementsSet.add(Square(Rank.fromId(rank), File.fromId(file)))
+            possibleMovementsSet.add(Square(File.fromId(file), Rank.fromId(rank)))
         }
     }
 

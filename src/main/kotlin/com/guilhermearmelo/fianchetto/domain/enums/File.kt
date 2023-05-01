@@ -1,26 +1,26 @@
 package com.guilhermearmelo.fianchetto.domain.enums
 
 enum class File {
-    ONE,
-    TWO,
-    THREE,
-    FOUR,
-    FIVE,
-    SIX,
-    SEVEN,
-    EIGHT;
+    A,
+    B,
+    C,
+    D,
+    E,
+    F,
+    G,
+    H;
 
     companion object {
         fun fromId(id: Int): File {
             return when (id) {
-                1 -> ONE
-                2 -> TWO
-                3 -> THREE
-                4 -> FOUR
-                5 -> FIVE
-                6 -> SIX
-                7 -> SEVEN
-                else -> EIGHT
+                1 -> A
+                2 -> B
+                3 -> C
+                4 -> D
+                5 -> E
+                6 -> F
+                7 -> G
+                else -> H
             }
         }
     }

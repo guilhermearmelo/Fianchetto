@@ -10,7 +10,7 @@ class Board {
     init {
         for (i in 1..8) {
             for (j in 1..8) {
-                positions[i - 1][j - 1] = Square(Rank.fromId(j), File.fromId(i))
+                positions[i - 1][j - 1] = Square(File.fromId(j), Rank.fromId(i))
             }
         }
     }

@@ -14,17 +14,17 @@ data class Bishop(
         val file = position.file.ordinal + 1
 
         for (i in 1..8) {
-            addMovementIfValid(rank + i, file + i)
-            addMovementIfValid(rank - i, file - i)
-            addMovementIfValid(rank + i, file - i)
-            addMovementIfValid(rank - i, file + i)
+            addMovementIfValid(file + i, rank + i)
+            addMovementIfValid(file - i, rank - i)
+            addMovementIfValid(file + i, rank - i)
+            addMovementIfValid(file - i, rank + i)
         }
-        possibleMovementsSet.remove(Square(position.rank, position.file))
+        possibleMovementsSet.remove(Square(position.file, position.rank))
     }
 
     private fun addMovementIfValid(rank: Int, file: Int) {
         if (rank in 1..8 && file in 1..8) {
-            possibleMovementsSet.add(Square(Rank.fromId(rank), File.fromId(file)))
+            possibleMovementsSet.add(Square(File.fromId(file), Rank.fromId(rank)))
         }
     }
 
