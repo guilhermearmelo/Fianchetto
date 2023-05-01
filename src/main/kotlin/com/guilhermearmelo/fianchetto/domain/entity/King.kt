@@ -4,10 +4,10 @@ import com.guilhermearmelo.fianchetto.domain.enums.Color
 import com.guilhermearmelo.fianchetto.domain.enums.File
 import com.guilhermearmelo.fianchetto.domain.enums.Rank
 
-data class King (
+data class King(
     var position: Square,
     var color: Color
-) : Piece()  {
+) : Piece() {
     private var possibleMovementsSet = mutableSetOf<Square>()
 
     override fun possibleMovements() {
