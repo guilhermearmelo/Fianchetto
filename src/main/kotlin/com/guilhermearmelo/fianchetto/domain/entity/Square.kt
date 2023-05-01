@@ -4,10 +4,10 @@ import com.guilhermearmelo.fianchetto.domain.enums.File
 import com.guilhermearmelo.fianchetto.domain.enums.Rank
 
 data class Square(
-    var rank: Rank,
-    var file: File
+    var file: File,
+    var rank: Rank
 ) {
     fun getSquareName(): String {
-        return rank.name + (file.ordinal + 1).toString()
+        return file.name + (rank.ordinal + 1).toString()
     }
 }
